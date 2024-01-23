@@ -63,9 +63,9 @@ function cadastrarDespesas() {
     )
     
     if (despesas.validarDados()) {
-        console.log("Dados válidos")
+        bd.gravar(despesas);
+        $('#sucessoGravacao').modal('show');
     } else {
-        console.log("Dados invalid")
+       $('#erroGravacao').modal('show');
     }
-    //bd.gravar(despesas)
 }
